@@ -29,8 +29,8 @@
     "useDefineForClassFields": true,
     "baseUrl": "packages",
     "paths": {
-      "minimal-site": [
-        "packages/minimal-site/src"
+      "bodiless-test-site": [
+        "packages/bodiless-test-site/src"
       ]
     }
   }

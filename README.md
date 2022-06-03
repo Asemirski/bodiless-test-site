@@ -1,1 +1,1 @@
-# minimal-site
+# bodiless-test-site

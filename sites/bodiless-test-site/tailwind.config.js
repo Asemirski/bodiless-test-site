@@ -35,5 +35,5 @@ const twConfig = {
 module.exports = buildTailwindConfig({
   twConfig,
   resolver: (pkgName) => require.resolve(pkgName),
-  // prefer: ['@sites/minimal-site'],
+  // prefer: ['@sites/bodiless-test-site'],
 });

@@ -1,5 +1,5 @@
 {
-  "name": "minimal-site-monorepo",
+  "name": "bodiless-test-site-monorepo",
   "description": "",
   "version": "0.0.0",
   "keywords": [
@@ -40,7 +40,7 @@
     "lerna:canary": "lerna publish --canary --include-merged-tags --preid ks-canary --dist-tag ks-canary --force-publish",
     "pw:run": "npx playwright test playwright/tests/smoke/* --project=chromium --workers 1",
     "psh:setup-starter": "node ./scripts/psh-setup-starter",
-    "serve": "lerna run serve --stream --scope @sites/minimal-site",
+    "serve": "lerna run serve --stream --scope @sites/bodiless-test-site",
     "setup": "npm run bootstrap",
     "setup:gatsby-cloud": "npm run bootstrap:gatsby-cloud",
     "sites:pack": "lerna exec --no-private --stream -- npm pack",
@@ -49,7 +49,7 @@
     "sites:update": "npm run sites:pack && npm run sites:install",
     "sites:launch-test": "npm run sites:clone-local ${APP_SITE_DIR_NAME:-test-site} && npm run sites:update ${APP_SITE_DIR_NAME:-test-site} && cd sites/${APP_SITE_DIR_NAME:-test-site} && npm install --legacy-peer-deps && npm run start",
     "sites:launch-monorepo": "cd sites/${APP_SITE_DIR_NAME:-test-site} && npm run start",
-    "start": "lerna run start --stream --scope @sites/minimal-site",
+    "start": "lerna run start --stream --scope @sites/bodiless-test-site",
     "sync:fix": "syncpack fix-mismatches",
     "sync:check": "syncpack list-mismatches",
     "test": "jest",
@@ -57,7 +57,7 @@
     "test:ci": "WAIT_ON_TIMEOUT=600000 start-server-and-test sites:launch-test http://localhost:8005 cy:run",
     "test:monorepo": "WAIT_ON_TIMEOUT=600000 start-server-and-test sites:launch-monorepo http://localhost:8005 cy:run",
     "test:watch": "jest --watch",
-    "docs": "lerna run build:doc --stream --scope @sites/minimal-site && docsify serve ./sites/minimal-site/doc"
+    "docs": "lerna run build:doc --stream --scope @sites/bodiless-test-site && docsify serve ./sites/bodiless-test-site/doc"
   },
   "husky": {
     "hooks": {
