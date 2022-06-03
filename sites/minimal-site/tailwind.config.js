@@ -32,14 +32,8 @@ const twConfig = {
 //   exclude: ['@bodiless/organisms', '@bodiless/accordion'],
 // });
 
-console.log(buildTailwindConfig({
-  twConfig,
-  resolver: (pkgName) => require.resolve(pkgName),
-  // prefer: ['@sites/bodiless-test-site'],
-}));
-
 module.exports = buildTailwindConfig({
   twConfig,
   resolver: (pkgName) => require.resolve(pkgName),
-  // prefer: ['@sites/bodiless-test-site'],
+  // prefer: ['@sites/minimal-site'],
 });
